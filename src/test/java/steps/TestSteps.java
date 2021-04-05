@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-public class StepsTest {
+public class TestSteps {
     private final String BASE_URL = "https://github.com";
 
     @Step("Главная страница")

@@ -8,10 +8,10 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-public class AnnotatedStepsTest {
+public class AnnotatedTestSteps {
 
     private final static String REPOSITORY = "Xannara/qa_guru_allure";
-    private StepsTest stepsTest = new StepsTest();
+    private TestSteps steps = new TestSteps();
 
     @BeforeAll
     static void setup() {
@@ -24,10 +24,10 @@ public class AnnotatedStepsTest {
     @Story("Menu Issue")
     @DisplayName("Steps test")
     public void issueSearchTest() {
-        stepsTest.openMainPage();
-        stepsTest.searchForRepository(REPOSITORY);
-        stepsTest.goToRepository(REPOSITORY);
-        stepsTest.clickOnIssueTab();
-        stepsTest.shouldSeeWelcomeText();
+        steps.openMainPage();
+        steps.searchForRepository(REPOSITORY);
+        steps.goToRepository(REPOSITORY);
+        steps.clickOnIssueTab();
+        steps.shouldSeeWelcomeText();
     }
 }
